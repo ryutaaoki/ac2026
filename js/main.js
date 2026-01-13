@@ -136,10 +136,11 @@ function initSmoothScroll() {
 
 /**
  * Scroll Animations
- * Fade in sections as they enter viewport
+ * Fade in sections and individual items as they enter viewport
  */
 function initScrollAnimations() {
   const sections = document.querySelectorAll('.section');
+  const items = document.querySelectorAll('.work, .artist');
 
   const observerOptions = {
     root: null,
@@ -151,14 +152,16 @@ function initScrollAnimations() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        // Optionally stop observing after animation
-        // observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
   sections.forEach(section => {
     observer.observe(section);
+  });
+
+  items.forEach(item => {
+    observer.observe(item);
   });
 }
 

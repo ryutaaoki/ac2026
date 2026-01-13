@@ -985,6 +985,20 @@ img {
   transform: translateY(0);
 }
 
+/* Individual item animations */
+.work,
+.artist {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.work.visible,
+.artist.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Smooth scroll offset for fixed header */
 [id] {
   scroll-margin-top: calc(var(--header-height) + var(--space-lg));
