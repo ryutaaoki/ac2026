@@ -686,8 +686,8 @@ img {
 }
 
 .artist__image {
-  width: 560px;
-  height: 560px;
+  width: 700px;
+  height: auto;
   margin-bottom: var(--space-xl);
 }
 
@@ -913,8 +913,8 @@ img {
   }
 
   .artist__image {
-    width: 480px;
-    height: 480px;
+    width: 100%;
+    max-width: 700px;
   }
 }
 
@@ -947,8 +947,7 @@ img {
   }
 
   .artist__image {
-    width: 400px;
-    height: 400px;
+    max-width: 100%;
   }
 
   .schedule-item {
@@ -1000,10 +999,6 @@ img {
     font-size: 1.25rem;
   }
 
-  .artist__image {
-    width: 320px;
-    height: 320px;
-  }
 }
 
 /* ===================================
