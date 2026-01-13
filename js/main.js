@@ -21,15 +21,25 @@ function initLanguageToggle() {
   const langBtns = document.querySelectorAll('.lang-btn');
   const body = document.body;
 
-  // Set initial language
-  const savedLang = localStorage.getItem('language') || 'ja';
-  setLanguage(savedLang);
+  // Check URL parameter first, then localStorage, default to 'ja'
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlLang = urlParams.get('lang');
+  const savedLang = urlLang || localStorage.getItem('language') || 'ja';
+
+  // Validate language
+  const lang = (savedLang === 'en') ? 'en' : 'ja';
+  setLanguage(lang);
 
   langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.dataset.lang;
       setLanguage(lang);
       localStorage.setItem('language', lang);
+
+      // Update URL without reload
+      const url = new URL(window.location);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', url);
     });
   });
 
@@ -51,6 +61,9 @@ function initLanguageToggle() {
 
     // Update html lang attribute
     document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+
+    // Save to localStorage
+    localStorage.setItem('language', lang);
   }
 }
 
