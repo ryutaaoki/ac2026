@@ -978,11 +978,11 @@ img {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-lg);
   }
 
   .nav {
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-lg);
   }
 
   .hero__festival {
