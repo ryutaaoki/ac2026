@@ -777,6 +777,22 @@ img {
   display: block;
 }
 
+.access__map-link {
+  display: block;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-gray-200);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-gray-900);
+  transition: background 0.2s ease;
+}
+
+.access__map-link:hover {
+  background: var(--color-gray-300);
+}
+
 .access__directions {
   text-align: center;
   font-size: 0.9375rem;
