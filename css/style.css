@@ -687,8 +687,8 @@ img {
 }
 
 .artist__image {
-  width: 480px;
-  height: 480px;
+  width: 560px;
+  height: 560px;
   margin-bottom: var(--space-xl);
 }
 
@@ -893,8 +893,8 @@ img {
   }
 
   .artist__image {
-    width: 400px;
-    height: 400px;
+    width: 480px;
+    height: 480px;
   }
 }
 
@@ -927,8 +927,8 @@ img {
   }
 
   .artist__image {
-    width: 320px;
-    height: 320px;
+    width: 400px;
+    height: 400px;
   }
 
   .schedule-item {
@@ -971,8 +971,8 @@ img {
   }
 
   .artist__image {
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
   }
 }
 
