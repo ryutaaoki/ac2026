@@ -862,12 +862,9 @@ img {
 
 .footer__title {
   text-align: center;
-}
-
-.footer__festival {
-  font-family: var(--font-serif);
   font-size: 1rem;
   letter-spacing: 0.1em;
+  color: var(--color-white);
 }
 
 .footer__credits {
@@ -883,6 +880,10 @@ img {
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.8;
+}
+
+.footer__credits .credit-block li {
+  color: var(--color-white);
 }
 
 .footer__contact {
