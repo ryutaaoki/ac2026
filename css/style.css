@@ -149,15 +149,19 @@ img {
   height: var(--header-height);
   background: rgba(250, 250, 250, 0.95);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid var(--color-gray-200);
   transform: translateY(-100%);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  -webkit-transform: translateY(-100%);
+  will-change: transform, opacity;
 }
 
 .header.visible {
   transform: translateY(0);
+  -webkit-transform: translateY(0);
   opacity: 1;
 }
 
@@ -180,6 +184,10 @@ img {
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .nav__links a::after {
@@ -276,6 +284,10 @@ img {
 .mobile-menu__links a {
   font-size: 1.25rem;
   font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* ===================================
