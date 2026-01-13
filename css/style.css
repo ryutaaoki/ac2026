@@ -969,6 +969,10 @@ img {
     gap: var(--space-md);
     text-align: center;
   }
+
+  .footer__credits .credit-block li {
+    color: var(--color-white);
+  }
 }
 
 @media (max-width: 480px) {
