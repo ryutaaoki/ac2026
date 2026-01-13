@@ -624,9 +624,15 @@ img {
 .performance__title {
   font-size: 1.125rem;
   font-weight: 500;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-sm);
   padding-bottom: var(--space-md);
   border-bottom: 1px solid var(--color-gray-200);
+}
+
+.performance__duration {
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+  margin-bottom: var(--space-lg);
 }
 
 .performance__schedule {
