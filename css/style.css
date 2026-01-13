@@ -888,6 +888,7 @@ img {
 
 .footer__contact {
   font-size: 0.875rem;
+  color: var(--color-white);
 }
 
 .footer__contact a {
