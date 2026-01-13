@@ -191,33 +191,23 @@ function initEssayToggle() {
 
 /**
  * Header Scroll Effect
- * Change header style on scroll
+ * Show header after scrolling past threshold
  */
 function initHeaderScroll() {
   const header = document.querySelector('.header');
   if (!header) return;
 
-  let lastScroll = 0;
-  const scrollThreshold = 100;
+  const scrollThreshold = 200;
 
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
-    // Add/remove scrolled class
+    // Show/hide header based on scroll position
     if (currentScroll > scrollThreshold) {
-      header.classList.add('scrolled');
+      header.classList.add('visible');
     } else {
-      header.classList.remove('scrolled');
+      header.classList.remove('visible');
     }
-
-    // Hide/show header on scroll direction (optional - uncomment if needed)
-    // if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
-    //   header.classList.add('hidden');
-    // } else {
-    //   header.classList.remove('hidden');
-    // }
-
-    lastScroll = currentScroll;
   }, { passive: true });
 }
 
