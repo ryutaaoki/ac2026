@@ -186,11 +186,11 @@ function initEssayToggle() {
     const enSpan = toggle.querySelector('.en');
 
     if (isExpanded) {
-      jaSpan.textContent = '寄稿文を読む →';
-      enSpan.textContent = 'Read Curatorial Essay →';
+      jaSpan.textContent = 'ステートメント詳細を読む →';
+      enSpan.textContent = 'Read Full Statement →';
     } else {
-      jaSpan.textContent = '寄稿文を閉じる ×';
-      enSpan.textContent = 'Close Curatorial Essay ×';
+      jaSpan.textContent = 'ステートメント詳細を閉じる ×';
+      enSpan.textContent = 'Close Full Statement ×';
     }
 
     // Smooth scroll to essay if opening
