@@ -1004,27 +1004,29 @@ img {
 /* ===================================
    Animations & Transitions
    =================================== */
-.section {
+/* Scroll animations only apply when JS is available.
+   Without JS, all sections remain visible (default opacity: 1). */
+html.js .section {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.section.visible {
+html.js .section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Individual item animations */
-.work,
-.artist {
+html.js .work,
+html.js .artist {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.work.visible,
-.artist.visible {
+html.js .work.visible,
+html.js .artist.visible {
   opacity: 1;
   transform: translateY(0);
 }

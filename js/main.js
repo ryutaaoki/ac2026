@@ -4,6 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Enable JS-dependent animations (CSS uses html.js selector as fallback)
+  document.documentElement.classList.add('js');
+
   // Initialize all components
   initLanguageToggle();
   initMobileMenu();
